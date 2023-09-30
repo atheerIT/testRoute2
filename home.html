@@ -1,14 +1,102 @@
-<div>
-    <h1>this is home</h1>
-</div>
-<section class="splide" aria-label="Splide Basic HTML Example">
-    <div class="splide__track">
-          <ul class="splide__list">
-              <li class="splide__slide">Slide 01</li>
-              <li class="splide__slide">Slide 02</li>
-              <li class="splide__slide">Slide 03</li>
-          </ul>
+<section class="slider">
+    <div class="logo-social">
+      <div class="home-logo">
+        <div>
+          <img id="logo" src="logo.png" style="width: auto; height: 100px;">
+        </div>
+        <div>
+          <img src="05.svg" style="width: auto; height: 150px; ">
+        </div>
+      </div>
+      <div class="splide" aria-label="Splide Basic HTML Example">
+      <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide">
+                    <div class="card">
+                        <div class="title">
+                          <h1>this is card title</h1>
+                        </div>
+                        <div class="content">
+                          <div class="percentage">
+                            <h1>70%</h1>
+                          </div>
+                          <div class="discrep">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nisi illo voluptate fuga facere suscipit! Maxime reprehenderit esse consequatur qui corporis quaerat cumque quisquam facere, mollitia saepe quos minus recusandae.
+                          </div>
+                        </div>
+                        <div class="img">
+                          <img src="iraq_climate_and_conflict-4.jpg" alt="">
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide">Slide 2</li>
+            </ul>
+      </div>
+      <div class="splide__arrows slider_control">
+        <button class="splide__arrow splide__arrow--prev ">
+            <svg  width="17" height="21" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.29079 0.898529L1.25777 5.93187" stroke="#878787" stroke-width="0.75"/>
+              <path d="M6.29079 10.3494L1.25777 5.31604" stroke="#878787" stroke-width="0.75"/>
+              </svg>
+            </button>
+             
+            <span>
+                <svg width="44" height="44" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17.2443 32.6174C25.8656 32.6174 32.8644 25.6299 32.8644 16.9963C32.8644 8.37444 25.8656 1.37512 17.2443 1.37512C8.62304 1.37512 1.62419 8.36259 1.62419 16.9963C1.62419 25.6299 8.62304 32.6174 17.2443 32.6174Z" stroke="#878787" stroke-width="1.4"/>
+                  <path d="M17.2443 21.994C20.0036 21.994 22.2418 19.7557 22.2418 16.9962C22.2418 14.2368 20.0036 11.9984 17.2443 11.9984C14.485 11.9984 12.2468 14.2368 12.2468 16.9962C12.2468 19.7557 14.485 21.994 17.2443 21.994Z" fill="#E1D1BA"/>
+                  </svg>              
+              </span>
+              <button class="splide__arrow splide__arrow--next">
+                <svg width="16" height="21" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.53717 0.898529L5.58205 5.93187" stroke="#878787" stroke-width="0.75"/>
+                  <path d="M0.53717 10.3494L5.58205 5.31604" stroke="#878787" stroke-width="0.75"/>
+                  </svg> 
+              </button> 
+              <span>
+                <svg viewBox="0 0 298 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 46.4864C1 46.4864 45.3972 90.3179 104.053 40.4463C104.053 40.4463 154.501 -16.0929 212.908 6.20774C212.908 6.20774 273.233 31.0547 297.747 36.0881" stroke="#E2D1BA" stroke-width="1"/>
+              </svg>
+              </span> 
+      </div>
     </div>
+      <!-- <div class="slider_control">
+            <button class="splide__arrow splide__arrow--prev ">
+            <svg  width="17" height="21" viewBox="0 0 7 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.29079 0.898529L1.25777 5.93187" stroke="#878787" stroke-width="0.75"/>
+              <path d="M6.29079 10.3494L1.25777 5.31604" stroke="#878787" stroke-width="0.75"/>
+              </svg>
+            </button>
+
+        <span>
+          <svg width="44" height="44" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.2443 32.6174C25.8656 32.6174 32.8644 25.6299 32.8644 16.9963C32.8644 8.37444 25.8656 1.37512 17.2443 1.37512C8.62304 1.37512 1.62419 8.36259 1.62419 16.9963C1.62419 25.6299 8.62304 32.6174 17.2443 32.6174Z" stroke="#878787" stroke-width="1.4"/>
+            <path d="M17.2443 21.994C20.0036 21.994 22.2418 19.7557 22.2418 16.9962C22.2418 14.2368 20.0036 11.9984 17.2443 11.9984C14.485 11.9984 12.2468 14.2368 12.2468 16.9962C12.2468 19.7557 14.485 21.994 17.2443 21.994Z" fill="#E1D1BA"/>
+            </svg>              
+        </span>
+    
+            <button class="splide__arrow splide__arrow--next">
+          <svg width="16" height="21" viewBox="0 0 6 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.53717 0.898529L5.58205 5.93187" stroke="#878787" stroke-width="0.75"/>
+            <path d="M0.53717 10.3494L5.58205 5.31604" stroke="#878787" stroke-width="0.75"/>
+            </svg> 
+        </button>             
+        <span>
+          <svg viewBox="0 0 298 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 46.4864C1 46.4864 45.3972 90.3179 104.053 40.4463C104.053 40.4463 154.501 -16.0929 212.908 6.20774C212.908 6.20774 273.233 31.0547 297.747 36.0881" stroke="#E2D1BA" stroke-width="1"/>
+        </svg>
+        </span> -->
+        <!-- <img src="06.svg" class="slider-logo"> -->
+      <!-- </div> -->
+    </div>
+  </section>
+
+
+
+
+
+
+
+<!-- <section class="splide" aria-label="Splide Basic HTML Example">
     <div class="splide__arrows">
 		<button class="splide__arrow splide__arrow--prev">
 			Prev
@@ -17,4 +105,4 @@
 			Next
 		</button>
   </div>
-  </section>
+  </section> -->
