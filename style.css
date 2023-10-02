@@ -5,7 +5,7 @@ body {
   box-sizing: border-box;
   top: 0 ;
   left: 0;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 #container{
   width: 100vw;
@@ -93,8 +93,10 @@ a {
   cursor: pointer;
 }
 .slider {
+  width: 100%;
   height: 100vh;
   margin-bottom: 100px;
+  box-sizing: border-box;
 }
 .slider_control {
   display: inline-flex;
@@ -197,14 +199,22 @@ a {
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  
+}
+.container .water_arrow{
+  grid-column: 5/span 1;
+  grid-row: 1;
+  display: inline-flex;
+  align-self: center;
+}
+.container .water_posts{
+  grid-column: 1/span 5;
+  grid-row: 2;
 }
 .water_card {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-row: 2;
-  grid-column: 1/span 5;
-
+  gap: 20px;
+  padding-right: 150px;
 }
 .container .water-title {
   color: #98c6e1;
@@ -215,29 +225,15 @@ a {
   grid-row: 1;
   align-self: center;
 }
-.water-slider {
-  width: auto;
-  height: 40px;
-}
-.water-slider-logo {
-  display: inline-flex;
-  place-items: center;
-  gap: 0.5rem;
-  grid-column: 5/span 1;
-  grid-row: 1;
-  align-self: center;
-}
-#water_left, #water_right:hover{
-  cursor: pointer;
-}
 
-.water-content {
+.water_card .water-content {
   grid-row: 2;
   grid-column: 1/span 3;
   z-index: 1;
   align-self: center;
   height: 100%;
-  padding: 0 100px;
+  /* height: 100%;
+  padding: 0 100px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -285,8 +281,8 @@ a {
 .water-chart {
   grid-row: 3;
   grid-column: 3/-1;
-  position: relative;
-  top: -150px;
+  /* position: relative; */
+  /* top: -150px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -330,10 +326,11 @@ a {
   z-index: 1;
   align-self: center;
   height: 100%;
-  padding: 0 100px;
+  /* padding: 0 100px; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-left: 50px;
 }
 .pollution-content .title h1 {
   font-size: xx-large;
@@ -380,8 +377,8 @@ a {
   grid-row: 3;
   grid-column: 1/span 3;
   position: relative;
-  top: -250px;
-  left: -100px;
+  /* top: -250px; */
+  /* left: -100px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -389,8 +386,8 @@ a {
 }
 .pollution-chart h1 {
   text-transform: capitalize;
-  position: relative;
-  top: 250px;
+  /* position: relative;
+  top: 250px; */
 }
 #energy-title {
   color: #24b943;
@@ -415,8 +412,21 @@ a {
   cursor: pointer;
 }
 #vedio-container {
-  width: 1080px;
+  width: 100%;
   height: 607px;
+}
+.video_arrow {
+  position: relative;
+  top: 40vh;
+  z-index: 1;
+  width: 86vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#video_slider{
+  position: relative;
+  left: -50px;
 }
 
 .picture-grid{
@@ -510,7 +520,7 @@ a {
   justify-content: space-around;
   color: #f6f6f6;
   width: 100%;
-  height: 45vh;
+  height: 27rem;
   top: -8.5%;
 }
 .volunteer .icon-btn div {
@@ -549,6 +559,8 @@ a {
 .subscribe {
   width: 100vw;
   height: 50vh;
+  position: relative;
+  left: -200px;
   /* padding: 0 200px; */
   background-color: #d6edd9;
   display: flex;
@@ -556,6 +568,7 @@ a {
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
+ 
 }
 .subscribe h1 {
   font-size: 50pt;
@@ -650,12 +663,13 @@ a {
   font-size: 9pt;
 }
 .list-section {
-  width: 100vw;
+  width: 80vw;
   height: 100%;
   /* margin-left: 100px; */
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 
 }
 .list-logo {
@@ -667,7 +681,7 @@ a {
   width: 200px;
   height: 100px;
   float: right;
-  margin-right: 200px;
+  margin-right: 50px;
 }
 .list-container {
   display: flex;
@@ -678,9 +692,10 @@ a {
   padding: 20px;
   gap: 20px;
 }
-#post-colored {
+.list-container > :nth-child(even){
   background-color: #dbeed0;
 }
+
 .list-container .post-card {
   display: flex;
   flex-direction: row;
@@ -691,9 +706,15 @@ a {
   width: 70vw;
 
 }
+.list-container .post-card .img{
+  height: 157px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .list-container .post-card .img img{
   width: 200px;
-  height: 100%;
+  max-height: 137px;
   margin: 10px;
 }
 .post-card .title {
@@ -704,12 +725,13 @@ a {
   width: 100vw;
   height: 100vh;
   /* margin-left: 100px; */
-  background-image: url('http://localhost:5174/shutterstock_1754564180.jpg');
+  background-image: url('');
   background-size:cover;
   margin-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  margin-left: -200px;
 }
 .post-img-title h1 {
   color: #f6f6f6;
@@ -717,7 +739,68 @@ a {
   margin-bottom: 100px;
 
 }
-.swiper {
-  width: 100vw;
-  height: 100%;
+.static{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 20px;
+  background-color: #f6f6f6;
+}
+.static .static_div{
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.static .static_div .static_number{
+  font-size: 36pt;
+  color: #24b943;
+}
+
+.static .report_div{
+  width: 15rem;
+  height: 25rem;
+  border: solid 5px #0f1ec0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 20px;
+  background-image: url('book-covers-big-2019101610.jpg');
+  background-size: cover;
+}
+.static .report_div .report_title{
+  background-color: #27292b86;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #dbeed0;
+  text-align: center;
+}
+.pagination_arrows{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-self: center;
+  gap: 20px;
+  width: 70vw;
+}
+.splide__arrows button {
+  background-color: transparent;
+  border: none;
+}
+.splide__arrows button:hover{
+  cursor: pointer;
 }
